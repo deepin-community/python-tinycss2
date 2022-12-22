@@ -1,0 +1,84 @@
+Source: python-tinycss2
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders:
+ Michael Fladischer <fladi@debian.org>,
+Build-Depends:
+ debhelper-compat (= 11),
+ dh-python,
+ python3-all,
+ python3-pytest-cov,
+ python3-pytest-runner,
+ python3-setuptools,
+ python3-sphinx,
+ python3-sphinx-rtd-theme,
+ python3-webencodings,
+Standards-Version: 4.1.5
+Homepage: https://github.com/Kozea/tinycss2/
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-tinycss2.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-tinycss2
+Testsuite: autopkgtest-pkg-python
+
+Package: python-tinycss2-doc
+Section: doc
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${sphinxdoc:Depends},
+Description: Low-level CSS parser (Documentation)
+ tinycss2 is a rewrite of tinycss with a simpler API, based on the more recent
+ CSS Syntax Level 3 specification.
+ .
+ tinycss2 is low-level in that it doesn’t parse all of CSS: it doesn't know
+ about the syntax of any specific properties or at-rules. Instead, it provides a
+ set of functions that can be composed to support exactly the parts of CSS
+ you're interested in, including new or non-standard rules or properties,
+ without modifying tinycss or having a complex hook/plugin system.
+ .
+ In many cases, parts of the parsed values (such as the content of a AtRule) is
+ given as component values that can be parsed further with other functions.
+ .
+ This package contains the documentation.
+
+Package: python3-tinycss2
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python-tinycss2-common,
+Suggests:
+ python-tinycss2-doc,
+Description: Low-level CSS parser (Python3 version)
+ tinycss2 is a rewrite of tinycss with a simpler API, based on the more recent
+ CSS Syntax Level 3 specification.
+ .
+ tinycss2 is low-level in that it doesn’t parse all of CSS: it doesn't know
+ about the syntax of any specific properties or at-rules. Instead, it provides a
+ set of functions that can be composed to support exactly the parts of CSS
+ you're interested in, including new or non-standard rules or properties,
+ without modifying tinycss or having a complex hook/plugin system.
+ .
+ In many cases, parts of the parsed values (such as the content of a AtRule) is
+ given as component values that can be parsed further with other functions.
+ .
+ This package contains the Python 3 version of the library.
+
+Package: python-tinycss2-common
+Architecture: all
+Depends:
+ ${misc:Depends},
+Description: Low-level CSS parser (test data)
+ tinycss2 is a rewrite of tinycss with a simpler API, based on the more recent
+ CSS Syntax Level 3 specification.
+ .
+ tinycss2 is low-level in that it doesn’t parse all of CSS: it doesn't know
+ about the syntax of any specific properties or at-rules. Instead, it provides a
+ set of functions that can be composed to support exactly the parts of CSS
+ you're interested in, including new or non-standard rules or properties,
+ without modifying tinycss or having a complex hook/plugin system.
+ .
+ In many cases, parts of the parsed values (such as the content of a AtRule) is
+ given as component values that can be parsed further with other functions.
+ .
+ This package contains the test data of the library.

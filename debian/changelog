@@ -1,0 +1,25 @@
+python-tinycss2 (1.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Scott Kitterman ]
+  * Add d/gbp.conf so debian/master is used as the default branch
+  * New upstream release
+  * Update d/p/0001-Do-not-use-pytest-isort-and-pytest-flake8-in-tests-n.patch
+    to match upstream changes
+  * Drop d/p/0002-Decode-test-data-using-UTF-8.patch, incorporated upstream
+  * Drop d/p/0003-Convert-travis-ci-badge-to-text-link-to-avoid-privac.patch,
+    related code removed upstream
+  * Readd docs dir upstream failed to include in the release tarball
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 09 Aug 2019 16:06:20 -0400
+
+python-tinycss2 (0.6.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #903817).
+
+ -- Michael Fladischer <fladi@debian.org>  Sun, 15 Jul 2018 12:08:24 +0200

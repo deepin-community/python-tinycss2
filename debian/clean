@@ -1,0 +1,6 @@
+.coverage
+.eggs/README.txt
+.pytest_cache/v/cache/nodeids
+tinycss2.egg-info/PKG-INFO
+tinycss2.egg-info/requires.txt
+
